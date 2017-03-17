@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "movecraft",
+  "name": "MoveCraft",
+  "description": "A mod revolving about transportation",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "www.ewaldisgay.com",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Ewald Hartmann"],["Marco Heiling"],["AsterAether"]
+  "credits": "This goes to all our fans, you rock!!!! <3",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
