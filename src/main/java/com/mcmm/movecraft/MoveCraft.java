@@ -1,6 +1,6 @@
 package com.mcmm.movecraft;
 
-import com.mcmm.blocks.StartupCommon;
+
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.Mod;
@@ -20,7 +20,8 @@ public class MoveCraft {
     public void init(FMLInitializationEvent event)
     {
         // some example code
-        new StartupCommon().preInitCommon();
+        new com.mcmm.blocks.darkstreet.StartupCommon().preInitCommon();
+        new com.mcmm.blocks.lightstreet.StartupCommon().preInitCommon();
         System.out.println("DIRTY BLOCK >> "+ Blocks.DIRT.getUnlocalizedName());
     }
 }

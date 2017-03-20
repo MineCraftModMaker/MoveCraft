@@ -1,4 +1,4 @@
-package com.mcmm.blocks;
+package com.mcmm.blocks.darkstreet;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -12,9 +12,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 /**
  * Created by Marco on 20.03.2017.
  */
-public class Greenstone extends Block{
+public class DarkStreet extends Block{
 
-    public Greenstone() {
+    public DarkStreet() {
         super(Material.ROCK);
         this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
     }
