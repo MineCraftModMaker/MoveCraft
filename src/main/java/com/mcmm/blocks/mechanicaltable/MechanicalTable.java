@@ -1,4 +1,4 @@
-package com.mcmm.blocks.darkstreet;
+package com.mcmm.blocks.mechanicaltable;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -12,10 +12,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 /**
  * Created by Marco on 20.03.2017.
  */
-public class DarkStreet extends Block{
+public class MechanicalTable extends Block{
 
-    public DarkStreet() {
-        super(Material.ROCK);
+    public MechanicalTable() {
+        super(Material.IRON);
         this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
     }
 
@@ -40,11 +40,5 @@ public class DarkStreet extends Block{
         return EnumBlockRenderType.MODEL;
     }
 
-    //public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
-    //{
-    //    System.out.println("stepped on it");
-    //    entityIn.motionX *= 0.4D;
-    //    entityIn.motionZ *= 0.4D;
-    //}
 
 }

@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "down": "movecraft:blocks/mechanicaltable_texture_bot",
+        "up": "movecraft:blocks/mechanicaltable_texture_top",
+        "north": "movecraft:blocks/mechanicaltable_texture_side",
+        "east": "movecraft:blocks/mechanicaltable_texture_side",
+        "south": "movecraft:blocks/mechanicaltable_texture_side",
+        "west": "movecraft:blocks/mechanicaltable_texture_side",
+        "particle": "blocks/lapis_block"
+    }
+}

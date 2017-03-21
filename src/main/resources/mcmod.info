@@ -5,9 +5,9 @@
   "description": "A mod revolving about transportation",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "www.ewaldisgay.com",
+  "url": "",
   "updateUrl": "",
-  "authorList": ["Ewald Hartmann"],["Marco Heiling"],["AsterAether"]
+  "authorList": ["Ewald Hartmann", "Marco Heiling", "AesterAether"],
   "credits": "This goes to all our fans, you rock!!!! <3",
   "logoFile": "",
   "screenshots": [],

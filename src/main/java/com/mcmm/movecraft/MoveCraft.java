@@ -22,9 +22,11 @@ public class MoveCraft {
         // some example code
         com.mcmm.blocks.darkstreet.StartupCommon.preInitCommon();
         com.mcmm.blocks.lightstreet.StartupCommon.preInitCommon();
+        com.mcmm.blocks.mechanicaltable.StartupCommon.preInitCommon();
 
         com.mcmm.blocks.darkstreet.StartupClientOnly.preInitClientOnly();
         com.mcmm.blocks.lightstreet.StartupClientOnly.preInitClientOnly();
+        com.mcmm.blocks.mechanicaltable.StartupClientOnly.preInitClientOnly();
 
         System.out.println("DIRTY BLOCK >> "+ Blocks.DIRT.getUnlocalizedName());
     }
