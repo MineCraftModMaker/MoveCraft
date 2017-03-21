@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "down": "movecraft:blocks/lightstreet_texture",
+        "up": "movecraft:blocks/lightstreet_texture",
+        "north": "movecraft:blocks/lightstreet_texture",
+        "east": "movecraft:blocks/lightstreet_texture",
+        "south": "movecraft:blocks/lightstreet_texture",
+        "west": "movecraft:blocks/lightstreet_texture",
+        "particle": "blocks/lapis_block"
+    }
+}

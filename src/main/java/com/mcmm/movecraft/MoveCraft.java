@@ -20,8 +20,12 @@ public class MoveCraft {
     public void init(FMLInitializationEvent event)
     {
         // some example code
-        new com.mcmm.blocks.darkstreet.StartupCommon().preInitCommon();
-        new com.mcmm.blocks.lightstreet.StartupCommon().preInitCommon();
+        com.mcmm.blocks.darkstreet.StartupCommon.preInitCommon();
+        com.mcmm.blocks.lightstreet.StartupCommon.preInitCommon();
+
+        com.mcmm.blocks.darkstreet.StartupClientOnly.preInitClientOnly();
+        com.mcmm.blocks.lightstreet.StartupClientOnly.preInitClientOnly();
+
         System.out.println("DIRTY BLOCK >> "+ Blocks.DIRT.getUnlocalizedName());
     }
 }

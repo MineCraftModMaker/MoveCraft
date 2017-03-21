@@ -16,6 +16,10 @@ public class StartupClientOnly {
 
     public static void initClientOnly()
     {
+        System.out.println("was geht no net? Die texturen hinzuzufügen zu den blöcken bzw die models" +
+                "Is des im 1.10 mit dem json? Jap" +
+                "Fuck xD" +
+                "I schaus ma schnell an warte");
     }
 
     public static void postInitClientOnly()
