@@ -7,6 +7,6 @@
         "east": "movecraft:blocks/darkstreet_texture",
         "south": "movecraft:blocks/darkstreet_texture",
         "west": "movecraft:blocks/darkstreet_texture",
-        "particle": "blocks/lapis_block"
+        "particle": "movecraft:blocks/darkstreet_texture"
     }
 }

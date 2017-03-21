@@ -1,4 +1,4 @@
-package com.mcmm.blocks.lightstreet;
+package com.mcmm.movecraft.lightstreet;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;

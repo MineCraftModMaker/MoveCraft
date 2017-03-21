@@ -1,4 +1,4 @@
-package com.mcmm.blocks.mechanicaltable;
+package com.mcmm.movecraft.mechanicaltable;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;

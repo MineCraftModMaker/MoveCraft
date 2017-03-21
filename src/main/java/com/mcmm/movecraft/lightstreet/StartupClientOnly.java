@@ -1,4 +1,4 @@
-package com.mcmm.blocks.lightstreet;
+package com.mcmm.movecraft.lightstreet;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;

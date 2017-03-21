@@ -1,10 +1,11 @@
 package com.mcmm.movecraft;
 
 
-import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 /**
  * Created by Marco on 17.03.2017.
@@ -14,20 +15,27 @@ public class MoveCraft {
     public static final String MODID = "movecraft";
     public static final String VERSION = "0.1";
 
-    public static Block greenstone;
+    @SidedProxy(clientSide="com.mcmm.movecraft.ClientOnlyProxy", serverSide="com.mcmm.movecraft.DedicatedServerProxy")
+    public static CommonProxy proxy;
+
+    @Mod.EventHandler
+    public void preInit(FMLPreInitializationEvent event)
+    {
+        proxy.preInit();
+    }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
-        // some example code
-        com.mcmm.blocks.darkstreet.StartupCommon.preInitCommon();
-        com.mcmm.blocks.lightstreet.StartupCommon.preInitCommon();
-        com.mcmm.blocks.mechanicaltable.StartupCommon.preInitCommon();
-
-        com.mcmm.blocks.darkstreet.StartupClientOnly.preInitClientOnly();
-        com.mcmm.blocks.lightstreet.StartupClientOnly.preInitClientOnly();
-        com.mcmm.blocks.mechanicaltable.StartupClientOnly.preInitClientOnly();
-
-        System.out.println("DIRTY BLOCK >> "+ Blocks.DIRT.getUnlocalizedName());
+        proxy.init();
     }
+
+    @Mod.EventHandler
+    public void postInit(FMLPostInitializationEvent event)
+    {
+        proxy.postInit();
+    }
+
+
+    public static String prependModID(String name) {return MODID + ":" + name;}
 }

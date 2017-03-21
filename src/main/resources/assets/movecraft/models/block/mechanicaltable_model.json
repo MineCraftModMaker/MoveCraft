@@ -7,6 +7,6 @@
         "east": "movecraft:blocks/mechanicaltable_texture_side",
         "south": "movecraft:blocks/mechanicaltable_texture_side",
         "west": "movecraft:blocks/mechanicaltable_texture_side",
-        "particle": "blocks/lapis_block"
+        "particle": "movecraft:blocks/mechanicaltable_texture_side"
     }
 }
