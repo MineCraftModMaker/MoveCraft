@@ -29,6 +29,7 @@ public abstract class CommonProxy {
     com.mcmm.movecraft.darkstreet.StartupCommon.initCommon();
     com.mcmm.movecraft.lightstreet.StartupCommon.initCommon();
     com.mcmm.movecraft.mechanicaltable.StartupCommon.initCommon();
+    com.mcmm.movecraft.recipes.StartupCommon.init();
   }
 
   /**
