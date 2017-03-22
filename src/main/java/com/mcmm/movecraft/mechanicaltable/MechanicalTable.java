@@ -12,7 +12,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 /**
  * Created by Marco on 20.03.2017.
  */
-public class MechanicalTable extends Block{
+public class MechanicalTable extends Block {
 
     public MechanicalTable() {
         super(Material.IRON);

@@ -46,7 +46,6 @@ public class LightStreet extends Block {
 
     public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
     {
-        System.out.println("stepped on it");
         entityIn.motionX *= 1.1D;
         entityIn.motionZ *= 1.1D;
     }
