@@ -1,11 +1,12 @@
 {
+    "ambientocclusion": false,
     "textures": {
+        "particle": "movecraft:blocks/teleportside_texture",
         "0": "movecraft:blocks/teleportside_texture",
         "1": "movecraft:blocks/teleportend_texture"
     },
     "elements": [
         {
-            "name": "Cube",
             "from": [ 0.0, 0.0, 0.0 ], 
             "to": [ 16.0, 1.0, 16.0 ], 
             "faces": {
