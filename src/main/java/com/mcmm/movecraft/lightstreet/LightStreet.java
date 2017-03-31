@@ -46,8 +46,8 @@ public class LightStreet extends Block {
 
     public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
     {
-        entityIn.motionX *= 1.1D;
-        entityIn.motionZ *= 1.1D;
+        entityIn.motionX *= 1.15D;
+        entityIn.motionZ *= 1.15D;
     }
 
     @Override

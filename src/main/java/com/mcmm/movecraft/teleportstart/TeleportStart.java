@@ -13,7 +13,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 /**
  * Created by Ewald on 27.03.2017.
  */
-public class TeleportStart extends Block{
+public class TeleportStart extends Block  {
 
     public TeleportStart() {
         super(Material.ROCK);
