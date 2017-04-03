@@ -20,6 +20,7 @@ public abstract class CommonProxy {
     com.mcmm.movecraft.mechanicaltable.StartupCommon.preInitCommon();
     com.mcmm.movecraft.teleportstart.StartupCommon.preInitCommon();
     com.mcmm.movecraft.teleportend.StartupCommon.preInitCommon();
+    com.mcmm.movecraft.ironpole.StartupCommon.preInitCommon();
   }
 
   /**
@@ -34,6 +35,7 @@ public abstract class CommonProxy {
     com.mcmm.movecraft.recipes.StartupCommon.init();
     com.mcmm.movecraft.teleportstart.StartupCommon.initCommon();
     com.mcmm.movecraft.teleportend.StartupCommon.initCommon();
+    com.mcmm.movecraft.ironpole.StartupCommon.initCommon();
   }
 
   /**
@@ -46,6 +48,7 @@ public abstract class CommonProxy {
     com.mcmm.movecraft.mechanicaltable.StartupCommon.postInitCommon();
     com.mcmm.movecraft.teleportstart.StartupCommon.postInitCommon();
     com.mcmm.movecraft.teleportend.StartupCommon.postInitCommon();
+    com.mcmm.movecraft.ironpole.StartupCommon.postInitCommon();
   }
 
   // helper to determine whether the given player is in creative mode

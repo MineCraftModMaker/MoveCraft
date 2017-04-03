@@ -25,6 +25,7 @@ public class ClientOnlyProxy extends CommonProxy
     com.mcmm.movecraft.mechanicaltable.StartupClientOnly.preInitClientOnly();
     com.mcmm.movecraft.teleportstart.StartupClientOnly.preInitClientOnly();
     com.mcmm.movecraft.teleportend.StartupClientOnly.preInitClientOnly();
+    com.mcmm.movecraft.ironpole.StartupClientOnly.preInitClientOnly();
   }
 
   /**
@@ -39,6 +40,7 @@ public class ClientOnlyProxy extends CommonProxy
     com.mcmm.movecraft.mechanicaltable.StartupClientOnly.initClientOnly();
     com.mcmm.movecraft.teleportstart.StartupClientOnly.initClientOnly();
     com.mcmm.movecraft.teleportend.StartupClientOnly.initClientOnly();
+    com.mcmm.movecraft.ironpole.StartupClientOnly.initClientOnly();
   }
 
   /**
@@ -52,6 +54,7 @@ public class ClientOnlyProxy extends CommonProxy
     com.mcmm.movecraft.mechanicaltable.StartupClientOnly.postInitClientOnly();
     com.mcmm.movecraft.teleportstart.StartupClientOnly.postInitClientOnly();
     com.mcmm.movecraft.teleportend.StartupClientOnly.postInitClientOnly();
+    com.mcmm.movecraft.ironpole.StartupClientOnly.postInitClientOnly();
   }
 
   @Override
