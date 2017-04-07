@@ -1,5 +1,6 @@
 {
     "ambientocclusion": false,
+    "parent": "block/cube",
     "textures": {
         "particle": "movecraft:blocks/teleportside_texture",
         "0": "movecraft:blocks/teleportside_texture",

@@ -11,9 +11,9 @@ public class StartupClientOnly {
 
     public static void preInitClientOnly()
     {
-        ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation("movecraft:teleportstart", "inventory");
+        ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation("movecraft:teleportend", "inventory");
         final int DEFAULT_ITEM_SUBTYPE = 0;
-        ModelLoader.setCustomModelResourceLocation(StartupCommon.itemTeleportStart, DEFAULT_ITEM_SUBTYPE, itemModelResourceLocation);
+        ModelLoader.setCustomModelResourceLocation(com.mcmm.movecraft.teleportend.StartupCommon.itemTeleportEnd, DEFAULT_ITEM_SUBTYPE, itemModelResourceLocation);
 
     }
 

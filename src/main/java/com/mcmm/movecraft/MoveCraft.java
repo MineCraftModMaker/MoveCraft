@@ -22,6 +22,7 @@ public class MoveCraft {
     public void preInit(FMLPreInitializationEvent event)
     {
         proxy.preInit();
+
     }
 
     @Mod.EventHandler

@@ -1,4 +1,6 @@
 tile.street_light.name=Light Street
 tile.street_dark.name=Dark Street
 tile.mechanicaltable.name=Mechanical Table
+tile.start_teleport.name=Teleport Start
+tile.end_teleport.name=Teleport End
 item.ironpole.name=Iron Pole
