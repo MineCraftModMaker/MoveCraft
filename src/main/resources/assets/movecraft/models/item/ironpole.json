@@ -2,6 +2,6 @@
 
   "parent": "item/generated",
     "textures": {
-        "layer0": "movecraft:items/ironpole_icon"
+        "layer0": "movecraft:items/ironpole_texture"
     }
 }
