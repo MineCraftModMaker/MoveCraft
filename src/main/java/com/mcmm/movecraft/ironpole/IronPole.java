@@ -10,6 +10,6 @@ public class IronPole extends Item{
     public IronPole() {
         final int MAX_NUMBER_OF_IRONPOLE = 64;
         this.setMaxStackSize(MAX_NUMBER_OF_IRONPOLE);
-        this.setCreativeTab(CreativeTabs.MISC);
+        this.setCreativeTab(CreativeTabs.MATERIALS);
     }
 }
