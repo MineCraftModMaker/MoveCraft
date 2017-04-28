@@ -5,3 +5,4 @@ tile.start_teleport.name=Teleport Start
 tile.end_teleport.name=Teleport End
 item.ironpole.name=Iron Pole
 item.teleportconnector.name=Teleport Connector
+tile.bike.name=Bike
