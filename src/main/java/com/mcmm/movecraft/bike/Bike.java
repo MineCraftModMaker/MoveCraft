@@ -1,22 +1,21 @@
 package com.mcmm.movecraft.bike;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumBlockRenderType;
-
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
  * Created by Ewald on 28.04.2017.
  */
-public class Bike extends Block{
+public class Bike extends Block {
 
     public Bike() {
-        super(Material.ROCK);
+        super(Material.IRON);
         this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
     }
 
@@ -40,5 +39,4 @@ public class Bike extends Block{
     public EnumBlockRenderType getRenderType(IBlockState iBlockState) {
         return EnumBlockRenderType.MODEL;
     }
-
 }
