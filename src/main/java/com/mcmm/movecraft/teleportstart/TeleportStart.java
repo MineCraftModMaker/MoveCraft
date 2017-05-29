@@ -23,6 +23,34 @@ import javax.annotation.Nullable;
  */
 public class TeleportStart extends Block  {
 
+    private int EndX;
+    private int EndY;
+    private int EndZ;
+
+    public int getEndX() {
+        return EndX;
+    }
+
+    public void setEndX(int endX) {
+        EndX = endX;
+    }
+
+    public int getEndY() {
+        return EndY;
+    }
+
+    public void setEndY(int endY) {
+        EndY = endY;
+    }
+
+    public int getEndZ() {
+        return EndZ;
+    }
+
+    public void setEndZ(int endZ) {
+        EndZ = endZ;
+    }
+
     public TeleportStart() {
         super(Material.ROCK);
         this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);

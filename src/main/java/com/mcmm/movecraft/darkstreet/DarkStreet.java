@@ -48,8 +48,6 @@ public class DarkStreet extends Block{
 
     public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
     {
-        System.out.println("MOTION X >> " + entityIn.motionX);
-        System.out.println("MOTION Y >> " + entityIn.motionY);
         entityIn.motionX *= 1.15D;
         entityIn.motionZ *= 1.15D;
         if(entityIn.motionX > 0.8)
