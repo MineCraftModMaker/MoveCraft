@@ -21,7 +21,7 @@ import net.minecraft.world.World;
  */
 public class TeleportConnector extends Item {
 
-    private Block lastBlock = null;
+    private static Block lastBlock = null;
 
     public TeleportConnector() {
         final int MAX_NUMBER_OF_CONNECTOR = 1;
@@ -44,14 +44,17 @@ public class TeleportConnector extends Item {
             int CBZ = pos.getZ();
             System.out.println(CBX + " " + CBY + " " + CBZ);
             if (lastBlock == null) {
+                System.out.println("click on Block");
                 lastBlock = clickedBlock;
             } else if (!lastBlock.equals(clickedBlock)
                     && lastBlock instanceof TeleportStart
                     && clickedBlock instanceof TeleportEnd) {
+                System.out.println("hallo");
                 TeleportStart ts = (TeleportStart) lastBlock;
                 ts.setEndX(CBX);
                 ts.setEndY(CBY);
                 ts.setEndZ(CBZ);
+                System.out.println("CBX " + ts.getEndX() + "CBY " + ts.getEndY() + "CBZ " + ts.getEndZ());
             }
         }
 
