@@ -18,10 +18,10 @@ public abstract class CommonProxy {
     com.mcmm.movecraft.darkstreet.StartupCommon.preInitCommon();
     com.mcmm.movecraft.lightstreet.StartupCommon.preInitCommon();
     com.mcmm.movecraft.mechanicaltable.StartupCommon.preInitCommon();
-    com.mcmm.movecraft.teleportstart.StartupCommon.preInitCommon();
-    com.mcmm.movecraft.teleportend.StartupCommon.preInitCommon();
+    com.mcmm.movecraft.teleporter.teleportstart.StartupCommon.preInitCommon();
+    com.mcmm.movecraft.teleporter.teleportend.StartupCommon.preInitCommon();
     com.mcmm.movecraft.ironpole.StartupCommon.preInitCommon();
-    com.mcmm.movecraft.teleportconnector.StartupCommon.preInitCommon();
+    com.mcmm.movecraft.teleporter.teleportconnector.StartupCommon.preInitCommon();
     com.mcmm.movecraft.bike.StartupCommon.preInitCommon();
   }
 
@@ -35,10 +35,10 @@ public abstract class CommonProxy {
     com.mcmm.movecraft.lightstreet.StartupCommon.initCommon();
     com.mcmm.movecraft.mechanicaltable.StartupCommon.initCommon();
     com.mcmm.movecraft.recipes.StartupCommon.init();
-    com.mcmm.movecraft.teleportstart.StartupCommon.initCommon();
-    com.mcmm.movecraft.teleportend.StartupCommon.initCommon();
+    com.mcmm.movecraft.teleporter.teleportstart.StartupCommon.initCommon();
+    com.mcmm.movecraft.teleporter.teleportend.StartupCommon.initCommon();
     com.mcmm.movecraft.ironpole.StartupCommon.initCommon();
-    com.mcmm.movecraft.teleportconnector.StartupCommon.initCommon();
+    com.mcmm.movecraft.teleporter.teleportconnector.StartupCommon.initCommon();
     com.mcmm.movecraft.bike.StartupCommon.initCommon();
   }
 
@@ -50,10 +50,10 @@ public abstract class CommonProxy {
     com.mcmm.movecraft.darkstreet.StartupCommon.postInitCommon();
     com.mcmm.movecraft.lightstreet.StartupCommon.postInitCommon();
     com.mcmm.movecraft.mechanicaltable.StartupCommon.postInitCommon();
-    com.mcmm.movecraft.teleportstart.StartupCommon.postInitCommon();
-    com.mcmm.movecraft.teleportend.StartupCommon.postInitCommon();
+    com.mcmm.movecraft.teleporter.teleportstart.StartupCommon.postInitCommon();
+    com.mcmm.movecraft.teleporter.teleportend.StartupCommon.postInitCommon();
     com.mcmm.movecraft.ironpole.StartupCommon.postInitCommon();
-    com.mcmm.movecraft.teleportconnector.StartupCommon.postInitCommon();
+    com.mcmm.movecraft.teleporter.teleportconnector.StartupCommon.postInitCommon();
     com.mcmm.movecraft.bike.StartupCommon.postInitCommon();
   }
 

@@ -1,18 +1,14 @@
-package com.mcmm.movecraft.teleportstart;
+package com.mcmm.movecraft.teleporter.teleportend;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumBlockRenderType;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -21,37 +17,9 @@ import javax.annotation.Nullable;
 /**
  * Created by Ewald on 27.03.2017.
  */
-public class TeleportStart extends Block  {
+public class TeleportEnd extends Block{
 
-    private int EndX;
-    private int EndY;
-    private int EndZ;
-
-    public int getEndX() {
-        return EndX;
-    }
-
-    public void setEndX(int endX) {
-        EndX = endX;
-    }
-
-    public int getEndY() {
-        return EndY;
-    }
-
-    public void setEndY(int endY) {
-        EndY = endY;
-    }
-
-    public int getEndZ() {
-        return EndZ;
-    }
-
-    public void setEndZ(int endZ) {
-        EndZ = endZ;
-    }
-
-    public TeleportStart() {
+    public TeleportEnd() {
         super(Material.ROCK);
         this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
     }
@@ -97,14 +65,6 @@ public class TeleportStart extends Block  {
     }
 
 
-    @Mod.EventHandler
-    public void onClicked(PlayerInteractEvent event)
-    {
-        EntityPlayer player = event.getEntityPlayer();
-        System.out.println("EVENT");
-        player.getHeldItem(EnumHand.MAIN_HAND);
-    }
-
-
-
 }
+
+

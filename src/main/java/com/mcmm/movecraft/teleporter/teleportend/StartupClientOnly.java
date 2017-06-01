@@ -1,6 +1,5 @@
-package com.mcmm.movecraft.teleportend;
+package com.mcmm.movecraft.teleporter.teleportend;
 
-import com.mcmm.movecraft.teleportstart.StartupCommon;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 
@@ -13,7 +12,7 @@ public class StartupClientOnly {
     {
         ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation("movecraft:teleportend", "inventory");
         final int DEFAULT_ITEM_SUBTYPE = 0;
-        ModelLoader.setCustomModelResourceLocation(com.mcmm.movecraft.teleportend.StartupCommon.itemTeleportEnd, DEFAULT_ITEM_SUBTYPE, itemModelResourceLocation);
+        ModelLoader.setCustomModelResourceLocation(com.mcmm.movecraft.teleporter.teleportend.StartupCommon.itemTeleportEnd, DEFAULT_ITEM_SUBTYPE, itemModelResourceLocation);
 
     }
 

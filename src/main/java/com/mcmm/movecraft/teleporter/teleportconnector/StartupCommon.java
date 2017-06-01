@@ -1,4 +1,4 @@
-package com.mcmm.movecraft.teleportconnector;
+package com.mcmm.movecraft.teleporter.teleportconnector;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
 

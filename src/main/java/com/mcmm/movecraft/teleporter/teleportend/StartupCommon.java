@@ -1,7 +1,6 @@
-package com.mcmm.movecraft.teleportend;
+package com.mcmm.movecraft.teleporter.teleportend;
 
 
-import com.mcmm.movecraft.darkstreet.DarkStreet;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 

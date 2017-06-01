@@ -1,4 +1,4 @@
-package com.mcmm.movecraft.teleportstart;
+package com.mcmm.movecraft.teleporter.teleportstart;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
