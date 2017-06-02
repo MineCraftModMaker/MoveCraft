@@ -18,6 +18,7 @@ public class PortConnection {
         this.endX = endX;
         this.endY = endY;
         this.endZ = endZ;
+
     }
 
     @Override
