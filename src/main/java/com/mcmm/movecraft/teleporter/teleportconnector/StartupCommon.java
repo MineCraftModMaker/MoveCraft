@@ -4,7 +4,7 @@ import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
- * Created by Marco on 20.03.2017.
+ * Created by Ewald on 04.05.2017.
  */
 public class StartupCommon {
 
@@ -15,6 +15,7 @@ public class StartupCommon {
         teleportConnector = (TeleportConnector)(new TeleportConnector().setUnlocalizedName("teleportconnector"));
         teleportConnector.setRegistryName("teleport_connector");
         GameRegistry.register(teleportConnector);
+
 
     }
 
