@@ -1,5 +1,6 @@
 package com.mcmm.movecraft.teleporter.teleportconnector;
 
+import com.mcmm.movecraft.MoveCraft;
 import com.mcmm.movecraft.teleporter.PortConnection;
 import com.mcmm.movecraft.teleporter.teleportend.TeleportEnd;
 import com.mcmm.movecraft.teleporter.teleportstart.TeleportStart;
@@ -28,7 +29,7 @@ public class TeleportConnector extends Item {
     public TeleportConnector() {
         final int MAX_NUMBER_OF_CONNECTOR = 1;
         this.setMaxStackSize(MAX_NUMBER_OF_CONNECTOR);
-        this.setCreativeTab(CreativeTabs.TOOLS);
+        this.setCreativeTab(MoveCraft.creativeTab);
     }
 
 //    @Override

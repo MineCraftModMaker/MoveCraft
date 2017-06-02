@@ -1,5 +1,6 @@
 package com.mcmm.movecraft.ironpole;
 
+import com.mcmm.movecraft.MoveCraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
@@ -10,6 +11,6 @@ public class IronPole extends Item{
     public IronPole() {
         final int MAX_NUMBER_OF_IRONPOLE = 64;
         this.setMaxStackSize(MAX_NUMBER_OF_IRONPOLE);
-        this.setCreativeTab(CreativeTabs.MATERIALS);
+        this.setCreativeTab(MoveCraft.creativeTab);
     }
 }

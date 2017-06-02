@@ -1,5 +1,6 @@
 package com.mcmm.movecraft.teleporter.teleportstart;
 
+import com.mcmm.movecraft.MoveCraft;
 import com.mcmm.movecraft.teleporter.PortConnection;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -61,7 +62,7 @@ public class TeleportStart extends Block  {
 
     public TeleportStart() {
         super(Material.ROCK);
-        this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+        this.setCreativeTab(MoveCraft.creativeTab);
         connectionList = new LinkedList<>();
     }
 

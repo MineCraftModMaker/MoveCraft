@@ -1,5 +1,6 @@
 package com.mcmm.movecraft.mechanicaltable;
 
+import com.mcmm.movecraft.MoveCraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -16,7 +17,7 @@ public class MechanicalTable extends Block {
 
     public MechanicalTable() {
         super(Material.IRON);
-        this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+        this.setCreativeTab(MoveCraft.creativeTab);
     }
 
     @SideOnly(Side.CLIENT)

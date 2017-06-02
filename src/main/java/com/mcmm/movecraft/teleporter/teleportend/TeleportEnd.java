@@ -1,5 +1,6 @@
 package com.mcmm.movecraft.teleporter.teleportend;
 
+import com.mcmm.movecraft.MoveCraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -21,7 +22,7 @@ public class TeleportEnd extends Block{
 
     public TeleportEnd() {
         super(Material.ROCK);
-        this.setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+        this.setCreativeTab(MoveCraft.creativeTab);
     }
 
     @SideOnly(Side.CLIENT)
