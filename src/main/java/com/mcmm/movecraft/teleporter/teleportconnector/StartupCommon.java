@@ -1,5 +1,6 @@
 package com.mcmm.movecraft.teleporter.teleportconnector;
 
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
@@ -14,6 +15,7 @@ public class StartupCommon {
         teleportConnector = (TeleportConnector)(new TeleportConnector().setUnlocalizedName("teleportconnector"));
         teleportConnector.setRegistryName("teleport_connector");
         GameRegistry.register(teleportConnector);
+
     }
 
     public static void initCommon()

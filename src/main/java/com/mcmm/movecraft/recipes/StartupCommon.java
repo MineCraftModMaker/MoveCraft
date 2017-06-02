@@ -41,6 +41,25 @@ public class StartupCommon {
                 new ItemStack(Items.DYE, 1, WHITE_DYE_DAMAGE_VALUE)
         });
 
+        // TeleportConnector
+//        final int GRAY_DYE_DAMAGE_VALUE = EnumDyeColor.GRAY.getDyeDamage();
+//        GameRegistry.addRecipe(new ItemStack(com.mcmm.movecraft.teleporter.teleportconnector.StartupCommon.itemMechanicalTable), new Object[]{
+//                "...",
+//                "ICI",
+//                "LIL",
+//                'I', Items.IRON_INGOT,
+//                'C', Blocks.CRAFTING_TABLE,
+//                'L', new ItemStack(Items.DYE, 1, BLUE_DYE_DAMAGE_VALUE)});
+
+        // TeleportStart
+
+
+        // TeleportEnd
+
+
+        //TelepoertPearl
+
+
     }
 
     public static void postInit() {
