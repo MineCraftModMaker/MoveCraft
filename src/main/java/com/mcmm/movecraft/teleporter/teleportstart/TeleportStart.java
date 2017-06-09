@@ -2,6 +2,7 @@ package com.mcmm.movecraft.teleporter.teleportstart;
 
 import com.mcmm.movecraft.MoveCraft;
 import com.mcmm.movecraft.teleporter.PortConnection;
+import com.mcmm.movecraft.teleporter.TeleportData;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -15,6 +16,7 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraft.world.storage.MapStorage;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.relauncher.Side;
@@ -117,12 +119,19 @@ public class TeleportStart extends Block  {
 
     public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
     {
+
+
+
         double x = entityIn.getPositionVector().xCoord;
         double x1 = Math.abs(x - (int)x);
         double z = entityIn.getPositionVector().zCoord;
         double z1 = Math.abs(z - (int)z);
         if(x1 > 0.3 && x1 < 0.7 && z1 > 0.3 && z1 < 0.7) {
-
+            MapStorage storage = worldIn.getPerWorldStorage();
+            storage.setData("MOVECRAFT_DATA", TeleportData.get(worldIn));
+            System.out.println(((TeleportData)storage.getOrLoadData(TeleportData.class, "MOVECRAFT_DATA")).getList().toString());
+            connectionList = TeleportData.get(worldIn).getList();
+            //connectionList = TeleportData.get(worldIn).getList();
             for (PortConnection pc :
                     connectionList) {
                 if(pos.getX() == pc.getStartX() && pos.getY() == pc.getStartY() && pos.getZ() == pc.getStartZ())
@@ -135,27 +144,6 @@ public class TeleportStart extends Block  {
 
         }
 
-    }
-
-    public void addListEntry(PortConnection pc)
-    {
-        connectionList.add(pc);
-    }
-
-    public PortConnection isInList(PortConnection pc)
-    {
-        for (PortConnection portCon : connectionList) {
-            if(pc.equals(portCon))
-            {
-                return portCon;
-            }
-        }
-        return null;
-    }
-
-    public boolean deleteListEntry(PortConnection pc)
-    {
-        return connectionList.remove(pc);
     }
 
     @Override

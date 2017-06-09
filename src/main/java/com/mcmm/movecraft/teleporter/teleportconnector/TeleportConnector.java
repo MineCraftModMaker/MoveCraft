@@ -2,6 +2,7 @@ package com.mcmm.movecraft.teleporter.teleportconnector;
 
 import com.mcmm.movecraft.MoveCraft;
 import com.mcmm.movecraft.teleporter.PortConnection;
+import com.mcmm.movecraft.teleporter.TeleportData;
 import com.mcmm.movecraft.teleporter.teleportend.TeleportEnd;
 import com.mcmm.movecraft.teleporter.teleportstart.TeleportStart;
 import net.minecraft.block.Block;
@@ -15,6 +16,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
+import net.minecraft.world.storage.MapStorage;
 
 /**
  * Created by Marco on 07.04.2017.
@@ -107,14 +109,21 @@ public class TeleportConnector extends Item {
                 //startTele.setEndY(pos.getY() + 0.07);
                 //startTele.setEndZ(pos.getZ() + 0.5);
                 PortConnection pc = new PortConnection(startX, startY, startZ, pos.getX() + 0.5, pos.getY() + 0.07, pos.getZ() + 0.5);
-                PortConnection pcDouble = startTele.isInList(pc);
+                PortConnection pcDouble = TeleportData.get(worldIn).isInList(pc);
                 if(pcDouble == null)
                 {
-                    startTele.addListEntry(pc);
+                    TeleportData.get(worldIn).addListEntry(pc);
+                    TeleportData.get(worldIn).serializeNBT();
+                    MapStorage storage = worldIn.getPerWorldStorage();
+                    storage.setData("MOVECRAFT_DATA", TeleportData.get(worldIn));
+                    storage.saveAllData();
                 } else
                 {
-                    startTele.deleteListEntry(pcDouble);
-                    startTele.addListEntry(pc);
+                    TeleportData.get(worldIn).deleteListEntry(pcDouble);
+                    TeleportData.get(worldIn).addListEntry(pc);
+                    MapStorage storage = worldIn.getPerWorldStorage();
+                    storage.setData("MOVECRAFT_DATA", TeleportData.get(worldIn));
+                    storage.saveAllData();
                 }
 
             }

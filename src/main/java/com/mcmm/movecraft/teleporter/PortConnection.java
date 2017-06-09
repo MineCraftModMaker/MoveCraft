@@ -18,7 +18,6 @@ public class PortConnection {
         this.endX = endX;
         this.endY = endY;
         this.endZ = endZ;
-
     }
 
     @Override
@@ -82,5 +81,11 @@ public class PortConnection {
 
     public void setEndZ(double endZ) {
         this.endZ = endZ;
+    }
+
+
+    @Override
+    public String toString() {
+        return startX + "," + startY + "," + startZ + "," + endX + "," + endY + "," + endZ + ";";
     }
 }

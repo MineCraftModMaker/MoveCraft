@@ -1,7 +1,7 @@
 package com.mcmm.movecraft;
 
 
-import com.mcmm.movecraft.movecraft.MoveCraftTap;
+import com.mcmm.movecraft.movecraft.MoveCraftTab;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -15,7 +15,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class MoveCraft {
     public static final String MODID = "movecraft";
     public static final String VERSION = "0.1";
-    public static final MoveCraftTap creativeTab = new MoveCraftTap();
+    public static final MoveCraftTab creativeTab = new MoveCraftTab();
 
     @SidedProxy(clientSide="com.mcmm.movecraft.ClientOnlyProxy", serverSide="com.mcmm.movecraft.DedicatedServerProxy")
     public static CommonProxy proxy;

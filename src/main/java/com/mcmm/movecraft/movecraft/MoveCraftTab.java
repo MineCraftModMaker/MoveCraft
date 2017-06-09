@@ -7,10 +7,10 @@ import net.minecraft.item.Item;
 /**
  * Created by Ewald on 02.06.2017.
  */
-public class MoveCraftTap extends CreativeTabs {
+public class MoveCraftTab extends CreativeTabs {
 
 
-    public MoveCraftTap() {
+    public MoveCraftTab() {
         super("MoveCraft");
     }
 
