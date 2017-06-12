@@ -16,6 +16,6 @@ public class MoveCraftTab extends CreativeTabs {
 
     @Override
     public Item getTabIconItem() {
-        return Items.ENDER_PEARL;
+        return com.mcmm.movecraft.teleporter.teleportpearl.StartupCommon.teleportPearl;
     }
 }

@@ -113,15 +113,11 @@ public class TeleportStart extends Block  {
     public void onClicked(PlayerInteractEvent event)
     {
         EntityPlayer player = event.getEntityPlayer();
-        System.out.println("EVENT");
         player.getHeldItem(EnumHand.MAIN_HAND);
     }
 
     public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
     {
-
-
-
         double x = entityIn.getPositionVector().xCoord;
         double x1 = Math.abs(x - (int)x);
         double z = entityIn.getPositionVector().zCoord;
