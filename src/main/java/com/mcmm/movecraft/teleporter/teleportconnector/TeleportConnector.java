@@ -6,7 +6,6 @@ import com.mcmm.movecraft.teleporter.TeleportData;
 import com.mcmm.movecraft.teleporter.teleportend.TeleportEnd;
 import com.mcmm.movecraft.teleporter.teleportstart.TeleportStart;
 import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -16,7 +15,6 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
-import net.minecraft.world.storage.MapStorage;
 
 /**
  * Created by Marco on 07.04.2017.
@@ -82,10 +80,10 @@ public class TeleportConnector extends Item {
 
     @Override
     public EnumActionResult onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
-        if(!worldIn.isRemote)
-        {
-            return super.onItemUse(stack, playerIn, worldIn, pos, hand, facing, hitX, hitY, hitZ);
-        }
+//        if(!worldIn.isRemote)
+//        {
+//            return super.onItemUse(stack, playerIn, worldIn, pos, hand, facing, hitX, hitY, hitZ);
+//        }
         Block block = worldIn.getBlockState(pos).getBlock();
 
         if(block instanceof TeleportStart)
@@ -95,14 +93,20 @@ public class TeleportConnector extends Item {
             startX = pos.getX();
             startY = pos.getY();
             startZ = pos.getZ();
-            playerIn.addChatMessage(new TextComponentString("Start at: X(" + pos.getX() + ") Y(" + pos.getY() + ") Z(" + pos.getZ() + ")"));
+            if(!worldIn.isRemote) {
+                playerIn.addChatMessage(new TextComponentString("Start at: X(" + pos.getX() + ") Y(" + pos.getY() + ") Z(" + pos.getZ() + ")"));
+            }
         }
         if(block instanceof TeleportEnd)
         {
-            playerIn.addChatMessage(new TextComponentString("End at: X(" + pos.getX() + ") Y(" + pos.getY() + ") Z(" + pos.getZ() + ")"));
+            if(!worldIn.isRemote) {
+                playerIn.addChatMessage(new TextComponentString("End at: X(" + pos.getX() + ") Y(" + pos.getY() + ") Z(" + pos.getZ() + ")"));
+            }
             if(startBlock!= null)
             {
-                playerIn.addChatMessage(new TextComponentString("Connection Complete"));
+                if(!worldIn.isRemote) {
+                    playerIn.addChatMessage(new TextComponentString("Connection Complete"));
+                }
                 //playerIn.setPosition(pos.getX() + 0.5, pos.getY() + 0.07, pos.getZ() + 0.5);
                 TeleportStart startTele = (TeleportStart)startBlock;
                 //startTele.setEndX(pos.getX() + 0.5);
@@ -113,17 +117,10 @@ public class TeleportConnector extends Item {
                 if(pcDouble == null)
                 {
                     TeleportData.get(worldIn).addListEntry(pc);
-                    TeleportData.get(worldIn).serializeNBT();
-                    MapStorage storage = worldIn.getPerWorldStorage();
-                    storage.setData("MOVECRAFT_DATA", TeleportData.get(worldIn));
-                    storage.saveAllData();
                 } else
                 {
                     TeleportData.get(worldIn).deleteListEntry(pcDouble);
                     TeleportData.get(worldIn).addListEntry(pc);
-                    MapStorage storage = worldIn.getPerWorldStorage();
-                    storage.setData("MOVECRAFT_DATA", TeleportData.get(worldIn));
-                    storage.saveAllData();
                 }
 
             }

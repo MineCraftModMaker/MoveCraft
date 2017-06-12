@@ -1,7 +1,6 @@
 package com.mcmm.movecraft.movecraft;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
 /**
