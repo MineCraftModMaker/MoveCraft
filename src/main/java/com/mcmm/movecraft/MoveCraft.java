@@ -13,7 +13,10 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
  *
  * Main Klasse des Projektes
  */
+
 @Mod(modid = MoveCraft.MODID, version = MoveCraft.VERSION)
+
+
 public class MoveCraft {
     public static final String MODID = "movecraft";
     public static final String VERSION = "0.1";
