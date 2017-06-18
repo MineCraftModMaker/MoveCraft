@@ -1,4 +1,4 @@
-package com.mcmm.movecraft.darkstreet;
+package com.mcmm.movecraft.Street.darkstreet;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;

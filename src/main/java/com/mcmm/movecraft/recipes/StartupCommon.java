@@ -1,11 +1,8 @@
 package com.mcmm.movecraft.recipes;
 
-import com.mcmm.movecraft.MoveCraft;
-import com.mcmm.movecraft.teleporter.teleportpearl.TeleportPearl;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumDyeColor;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -16,49 +13,62 @@ public class StartupCommon {
     public static void preInit() {
     }
 
+    /**
+     * Crafting-Recipes
+     */
     public static void init() {
-        // Mechanical Table
+
+        final int RED_DYE_DAMAGE_VALUE = EnumDyeColor.RED.getDyeDamage();
         final int BLUE_DYE_DAMAGE_VALUE = EnumDyeColor.BLUE.getDyeDamage();
+        final int WHITE_DYE_DAMAGE_VALUE = EnumDyeColor.WHITE.getDyeDamage();
+        final int BLACK_DYE_DAMAGE_VALUE = EnumDyeColor.BLACK.getDyeDamage();
+
+
+        // Mechanical Table
         GameRegistry.addRecipe(new ItemStack(com.mcmm.movecraft.mechanicaltable.StartupCommon.itemMechanicalTable), new Object[]{
-            "...",
-            "ICI",
-            "LIL",
+                "...",
+                "ICI",
+                "LIL",
                 'I', Items.IRON_INGOT,
                 'C', Blocks.CRAFTING_TABLE,
                 'L', new ItemStack(Items.DYE, 1, BLUE_DYE_DAMAGE_VALUE)});
 
 
         // DarkStreet
-        final int BLACK_DYE_DAMAGE_VALUE = EnumDyeColor.BLACK.getDyeDamage();
-        GameRegistry.addShapelessRecipe(new ItemStack(com.mcmm.movecraft.darkstreet.StartupCommon.itemDarkStreet, 2), new Object[]{
+        GameRegistry.addShapelessRecipe(new ItemStack(com.mcmm.movecraft.Street.darkstreet.StartupCommon.itemDarkStreet, 2), new Object[]{
                 Blocks.COBBLESTONE,
                 Blocks.GRAVEL,
                 new ItemStack(Items.DYE, 1, BLACK_DYE_DAMAGE_VALUE)
         });
 
         // LightStreet
-        final int WHITE_DYE_DAMAGE_VALUE = EnumDyeColor.WHITE.getDyeDamage();
-        GameRegistry.addShapelessRecipe(new ItemStack(com.mcmm.movecraft.lightstreet.StartupCommon.itemLightStreet, 2), new Object[]{
-                Blocks.COBBLESTONE,
-                Blocks.GRAVEL,
+        GameRegistry.addShapelessRecipe(new ItemStack(com.mcmm.movecraft.Street.lightstreet.StartupCommon.itemLightStreet, 1), new Object[]{
+                com.mcmm.movecraft.Street.darkstreet.StartupCommon.darkStreet,
                 new ItemStack(Items.DYE, 1, WHITE_DYE_DAMAGE_VALUE)
+        });
+
+        // Asphalt
+        GameRegistry.addShapelessRecipe(new ItemStack(com.mcmm.movecraft.Street.asphalt.StartupCommon.itemAsphalt, 1), new Object[]{
+                Items.WATER_BUCKET,
+                Blocks.GRAVEL
         });
 
         //IronPole
         GameRegistry.addRecipe(new ItemStack(com.mcmm.movecraft.ironpole.StartupCommon.ironPole), new Object[]{
                 "..I",
-                ".I.",
+                ".B.",
                 "I..",
-                'I', Items.IRON_INGOT
+                'I', Items.IRON_INGOT,
+                'B', Items.BLAZE_ROD
         });
 
         // TeleportConnector
-        final int RED_DYE_DAMAGE_VALUE = EnumDyeColor.RED.getDyeDamage();
         GameRegistry.addRecipe(new ItemStack(com.mcmm.movecraft.teleporter.teleportconnector.StartupCommon.teleportConnector), new Object[]{
-                ".L.",
+                ".LI",
                 "OER",
                 "TO.",
                 'L', new ItemStack(Items.DYE, 1, BLUE_DYE_DAMAGE_VALUE),
+                'I', com.mcmm.movecraft.ironpole.StartupCommon.ironPole,
                 'O', Blocks.OBSIDIAN,
                 'E', Items.EMERALD,
                 'R', new ItemStack(Items.DYE, 1, RED_DYE_DAMAGE_VALUE),
@@ -93,7 +103,6 @@ public class StartupCommon {
                 'D', Items.DIAMOND,
                 'E', Items.ENDER_PEARL
         });
-
 
 
     }

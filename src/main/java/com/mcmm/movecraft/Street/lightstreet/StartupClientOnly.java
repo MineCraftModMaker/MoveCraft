@@ -1,4 +1,4 @@
-package com.mcmm.movecraft.darkstreet;
+package com.mcmm.movecraft.Street.lightstreet;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
@@ -9,9 +9,10 @@ import net.minecraftforge.client.model.ModelLoader;
 public class StartupClientOnly {
     public static void preInitClientOnly()
     {
-        ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation("movecraft:darkstreet", "inventory");
+        ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation("movecraft:lightstreet", "inventory");
+        System.out.println("ItemLocation >> " + itemModelResourceLocation.toString());
         final int DEFAULT_ITEM_SUBTYPE = 0;
-        ModelLoader.setCustomModelResourceLocation(StartupCommon.itemDarkStreet, DEFAULT_ITEM_SUBTYPE, itemModelResourceLocation);
+        ModelLoader.setCustomModelResourceLocation(StartupCommon.itemLightStreet, DEFAULT_ITEM_SUBTYPE, itemModelResourceLocation);
     }
 
     public static void initClientOnly()

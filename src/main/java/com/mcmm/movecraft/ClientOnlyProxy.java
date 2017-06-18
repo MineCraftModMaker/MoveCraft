@@ -20,8 +20,8 @@ public class ClientOnlyProxy extends CommonProxy
   {
     super.preInit();
 
-    com.mcmm.movecraft.darkstreet.StartupClientOnly.preInitClientOnly();
-    com.mcmm.movecraft.lightstreet.StartupClientOnly.preInitClientOnly();
+    com.mcmm.movecraft.Street.darkstreet.StartupClientOnly.preInitClientOnly();
+    com.mcmm.movecraft.Street.lightstreet.StartupClientOnly.preInitClientOnly();
     com.mcmm.movecraft.mechanicaltable.StartupClientOnly.preInitClientOnly();
     com.mcmm.movecraft.teleporter.teleportstart.StartupClientOnly.preInitClientOnly();
     com.mcmm.movecraft.teleporter.teleportend.StartupClientOnly.preInitClientOnly();
@@ -29,6 +29,7 @@ public class ClientOnlyProxy extends CommonProxy
     com.mcmm.movecraft.teleporter.teleportconnector.StartupClientOnly.preInitClientOnly();
     com.mcmm.movecraft.bike.StartupClientOnly.preInitClientOnly();
     com.mcmm.movecraft.teleporter.teleportpearl.StartupClientOnly.preInitClientOnly();
+    com.mcmm.movecraft.Street.asphalt.StartupClientOnly.preInitClientOnly();
   }
 
   /**
@@ -38,8 +39,8 @@ public class ClientOnlyProxy extends CommonProxy
   public void init()
   {
     super.init();
-    com.mcmm.movecraft.darkstreet.StartupClientOnly.initClientOnly();
-    com.mcmm.movecraft.lightstreet.StartupClientOnly.initClientOnly();
+    com.mcmm.movecraft.Street.darkstreet.StartupClientOnly.initClientOnly();
+    com.mcmm.movecraft.Street.lightstreet.StartupClientOnly.initClientOnly();
     com.mcmm.movecraft.mechanicaltable.StartupClientOnly.initClientOnly();
     com.mcmm.movecraft.teleporter.teleportstart.StartupClientOnly.initClientOnly();
     com.mcmm.movecraft.teleporter.teleportend.StartupClientOnly.initClientOnly();
@@ -47,6 +48,7 @@ public class ClientOnlyProxy extends CommonProxy
     com.mcmm.movecraft.teleporter.teleportconnector.StartupClientOnly.initClientOnly();
     com.mcmm.movecraft.bike.StartupClientOnly.initClientOnly();
     com.mcmm.movecraft.teleporter.teleportpearl.StartupClientOnly.initClientOnly();
+    com.mcmm.movecraft.Street.asphalt.StartupClientOnly.initClientOnly();
   }
 
   /**
@@ -55,8 +57,8 @@ public class ClientOnlyProxy extends CommonProxy
   public void postInit()
   {
     super.postInit();
-    com.mcmm.movecraft.darkstreet.StartupClientOnly.postInitClientOnly();
-    com.mcmm.movecraft.lightstreet.StartupClientOnly.postInitClientOnly();
+    com.mcmm.movecraft.Street.darkstreet.StartupClientOnly.postInitClientOnly();
+    com.mcmm.movecraft.Street.lightstreet.StartupClientOnly.postInitClientOnly();
     com.mcmm.movecraft.mechanicaltable.StartupClientOnly.postInitClientOnly();
     com.mcmm.movecraft.teleporter.teleportstart.StartupClientOnly.postInitClientOnly();
     com.mcmm.movecraft.teleporter.teleportend.StartupClientOnly.postInitClientOnly();
@@ -64,6 +66,7 @@ public class ClientOnlyProxy extends CommonProxy
     com.mcmm.movecraft.teleporter.teleportconnector.StartupClientOnly.postInitClientOnly();
     com.mcmm.movecraft.bike.StartupClientOnly.postInitClientOnly();
     com.mcmm.movecraft.teleporter.teleportpearl.StartupClientOnly.postInitClientOnly();
+    com.mcmm.movecraft.Street.asphalt.StartupClientOnly.postInitClientOnly();
   }
 
   @Override

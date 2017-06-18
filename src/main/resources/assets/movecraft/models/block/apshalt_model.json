@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "down": "movecraft:blocks/asphalt_texture",
+        "up": "movecraft:blocks/asphalt_texture",
+        "north": "movecraft:blocks/asphalt_texture",
+        "east": "movecraft:blocks/asphalt_texture",
+        "south": "movecraft:blocks/asphalt_texture",
+        "west": "movecraft:blocks/asphalt_texture",
+        "particle": "movecraft:blocks/asphalt_texture"
+  }
+}

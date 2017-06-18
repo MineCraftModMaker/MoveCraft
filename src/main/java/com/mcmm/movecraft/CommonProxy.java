@@ -15,8 +15,8 @@ public abstract class CommonProxy {
   public void preInit()
   {
 	   //read config first
-    com.mcmm.movecraft.darkstreet.StartupCommon.preInitCommon();
-    com.mcmm.movecraft.lightstreet.StartupCommon.preInitCommon();
+    com.mcmm.movecraft.Street.darkstreet.StartupCommon.preInitCommon();
+    com.mcmm.movecraft.Street.lightstreet.StartupCommon.preInitCommon();
     com.mcmm.movecraft.mechanicaltable.StartupCommon.preInitCommon();
     com.mcmm.movecraft.teleporter.teleportstart.StartupCommon.preInitCommon();
     com.mcmm.movecraft.teleporter.teleportend.StartupCommon.preInitCommon();
@@ -24,6 +24,7 @@ public abstract class CommonProxy {
     com.mcmm.movecraft.teleporter.teleportconnector.StartupCommon.preInitCommon();
     com.mcmm.movecraft.bike.StartupCommon.preInitCommon();
     com.mcmm.movecraft.teleporter.teleportpearl.StartupCommon.preInitCommon();
+    com.mcmm.movecraft.Street.asphalt.StartupCommon.preInitCommon();
   }
 
   /**
@@ -32,8 +33,8 @@ public abstract class CommonProxy {
    */
   public void init()
   {
-    com.mcmm.movecraft.darkstreet.StartupCommon.initCommon();
-    com.mcmm.movecraft.lightstreet.StartupCommon.initCommon();
+    com.mcmm.movecraft.Street.darkstreet.StartupCommon.initCommon();
+    com.mcmm.movecraft.Street.lightstreet.StartupCommon.initCommon();
     com.mcmm.movecraft.mechanicaltable.StartupCommon.initCommon();
     com.mcmm.movecraft.recipes.StartupCommon.init();
     com.mcmm.movecraft.teleporter.teleportstart.StartupCommon.initCommon();
@@ -42,6 +43,7 @@ public abstract class CommonProxy {
     com.mcmm.movecraft.teleporter.teleportconnector.StartupCommon.initCommon();
     com.mcmm.movecraft.bike.StartupCommon.initCommon();
     com.mcmm.movecraft.teleporter.teleportpearl.StartupCommon.initCommon();
+    com.mcmm.movecraft.Street.asphalt.StartupCommon.initCommon();
   }
 
   /**
@@ -49,8 +51,8 @@ public abstract class CommonProxy {
    */
   public void postInit()
   {
-    com.mcmm.movecraft.darkstreet.StartupCommon.postInitCommon();
-    com.mcmm.movecraft.lightstreet.StartupCommon.postInitCommon();
+    com.mcmm.movecraft.Street.darkstreet.StartupCommon.postInitCommon();
+    com.mcmm.movecraft.Street.lightstreet.StartupCommon.postInitCommon();
     com.mcmm.movecraft.mechanicaltable.StartupCommon.postInitCommon();
     com.mcmm.movecraft.teleporter.teleportstart.StartupCommon.postInitCommon();
     com.mcmm.movecraft.teleporter.teleportend.StartupCommon.postInitCommon();
@@ -58,6 +60,7 @@ public abstract class CommonProxy {
     com.mcmm.movecraft.teleporter.teleportconnector.StartupCommon.postInitCommon();
     com.mcmm.movecraft.bike.StartupCommon.postInitCommon();
     com.mcmm.movecraft.teleporter.teleportpearl.StartupCommon.postInitCommon();
+    com.mcmm.movecraft.Street.asphalt.StartupCommon.postInitCommon();
   }
 
   // helper to determine whether the given player is in creative mode
