@@ -8,4 +8,4 @@ item.teleportconnector.name=Teleport Connector
 tile.bike.name=Bike
 item.teleportpearl.name=Teleport Pearl
 itemGroup.MoveCraft=MoveCraft
-tile.asphalt.name=Asphalt
+tile.asphalt_unlocalized.name=Asphalt

@@ -1,6 +1,5 @@
 package com.mcmm.movecraft.Street.asphalt;
 
-import com.mcmm.movecraft.Street.darkstreet.DarkStreet;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -14,7 +13,7 @@ public class StartupCommon {
 
     public static void preInitCommon()
     {
-        asphalt = (Asphalt) (new Asphalt().setUnlocalizedName("asphalt"));
+        asphalt = (Asphalt) (new Asphalt().setUnlocalizedName("asphalt_unlocalized"));
         asphalt.setRegistryName("asphalt");
         GameRegistry.register(asphalt);
 
