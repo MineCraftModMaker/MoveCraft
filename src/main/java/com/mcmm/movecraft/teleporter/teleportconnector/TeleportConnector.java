@@ -18,6 +18,8 @@ import net.minecraft.world.World;
 
 /**
  * Created by Marco on 07.04.2017.
+ *
+ * Item zum Verknüpfen von den Beiden Teleport Platten
  */
 public class TeleportConnector extends Item {
 

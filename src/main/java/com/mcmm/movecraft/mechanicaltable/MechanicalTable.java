@@ -24,6 +24,9 @@ import javax.annotation.Nullable;
 
 /**
  * Created by Marco on 20.03.2017.
+ *
+ * Stellt das Crafting System da
+ * Trotz großen Aufwands ist es nicht gelungen dieses fertig zu stellen
  */
 public class MechanicalTable extends Block {
 

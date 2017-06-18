@@ -16,6 +16,8 @@ import javax.annotation.Nullable;
 
 /**
  * Created by Ewald on 27.03.2017.
+ *
+ * Stellt den Endpunkt des Teleport Systems dar
  */
 public class TeleportEnd extends Block{
 

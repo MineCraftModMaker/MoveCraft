@@ -25,6 +25,8 @@ import java.util.LinkedList;
 
 /**
  * Created by Ewald on 27.03.2017.
+ *
+ * Stellt den Startpunkt des Teleport Systems dar
  */
 public class TeleportStart extends Block  {
 

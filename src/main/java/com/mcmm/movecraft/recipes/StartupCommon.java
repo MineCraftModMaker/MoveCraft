@@ -8,6 +8,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
  * Created by Marco on 21.03.2017.
+ *
+ * Enthält alle Crafting Rezepte
  */
 public class StartupCommon {
     public static void preInit() {

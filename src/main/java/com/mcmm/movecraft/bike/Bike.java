@@ -11,6 +11,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
  * Created by Ewald on 28.04.2017.
+ *
+ * Müsste eigentlich ein Entity sein auf das man sich setzen kann
+ * Hatt jedoch trotz etlicher Stunden Bemühungen nicht funktioniert
  */
 public class Bike extends Block {
 

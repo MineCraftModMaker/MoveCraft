@@ -5,6 +5,8 @@ import net.minecraft.item.Item;
 
 /**
  * Created by Ewald on 02.06.2017.
+ *
+ * Wird sowohl als Crafting Item als auch als Zeichen des Tabs verwendet
  */
 public class TeleportPearl extends Item{
     /**

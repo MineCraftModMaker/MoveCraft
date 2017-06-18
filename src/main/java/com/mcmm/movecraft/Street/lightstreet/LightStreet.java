@@ -15,6 +15,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
  * Created by Marco on 20.03.2017.
+ *
+ * Block der einen Beschleunigt wenn man darüber geht
+ * Gleiche Funktion wie DarkStreet
  */
 public class LightStreet extends Block {
 

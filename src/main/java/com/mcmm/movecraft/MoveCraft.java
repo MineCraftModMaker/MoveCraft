@@ -10,6 +10,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 /**
  * Created by Marco on 17.03.2017.
+ *
+ * Main Klasse des Projektes
  */
 @Mod(modid = MoveCraft.MODID, version = MoveCraft.VERSION)
 public class MoveCraft {
@@ -20,6 +22,7 @@ public class MoveCraft {
     @SidedProxy(clientSide="com.mcmm.movecraft.ClientOnlyProxy", serverSide="com.mcmm.movecraft.DedicatedServerProxy")
     public static CommonProxy proxy;
 
+    // Alles wird initialisiert
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {

@@ -11,6 +11,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
  * Created by Ewald on 18.06.2017.
+ *
+ * Ein einfacher Dekorationsblock
  */
 public class Asphalt extends Block {
 

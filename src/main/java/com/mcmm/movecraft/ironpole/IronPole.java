@@ -1,11 +1,12 @@
 package com.mcmm.movecraft.ironpole;
 
 import com.mcmm.movecraft.MoveCraft;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 /**
  * Created by Marco on 03.04.2017.
+ *
+ * Ist ein Crafting Item
  */
 
 
