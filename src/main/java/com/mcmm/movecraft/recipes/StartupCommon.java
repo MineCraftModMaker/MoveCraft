@@ -47,6 +47,7 @@ public class StartupCommon {
                 new ItemStack(Items.DYE, 1, WHITE_DYE_DAMAGE_VALUE)
         });
 
+        // TODO: 18.06.2017  
         // Asphalt
         GameRegistry.addShapelessRecipe(new ItemStack(com.mcmm.movecraft.Street.asphalt.StartupCommon.itemAsphalt, 1), new Object[]{
                 Items.WATER_BUCKET,
