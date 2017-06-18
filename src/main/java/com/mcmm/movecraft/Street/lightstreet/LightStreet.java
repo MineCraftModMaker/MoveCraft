@@ -48,6 +48,22 @@ public class LightStreet extends Block {
     {
         entityIn.motionX *= 1.15D;
         entityIn.motionZ *= 1.15D;
+        if(entityIn.motionX > 0.8)
+        {
+            entityIn.motionX = 0.8;
+        }
+        if(entityIn.motionY > 0.8)
+        {
+            entityIn.motionY = 0.8;
+        }
+        if(entityIn.motionX < -0.8)
+        {
+            entityIn.motionX = -0.8;
+        }
+        if(entityIn.motionY < -0.8)
+        {
+            entityIn.motionY = -0.8;
+        }
     }
 
     @Override
