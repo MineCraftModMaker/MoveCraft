@@ -19,33 +19,63 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  */
 public class DarkStreet extends Block{
 
+    /**
+     * Übergibt das Material aus was es besteht
+     * Fügt in den CreativTab hinzu
+     */
     public DarkStreet() {
         super(Material.ROCK);
         this.setCreativeTab(MoveCraft.creativeTab);
     }
 
+    /**
+     * Gibt die Konsistens des Bockes zurück
+     * @return
+     */
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()
     {
         return BlockRenderLayer.SOLID;
     }
 
+    /**
+     * Gibt zurück ob der Block druchsichtig ist
+     * @param iBlockState
+     * @return
+     */
     @Override
     public boolean isOpaqueCube(IBlockState iBlockState) {
         return true;
     }
 
+    /**
+     * Gibt zurück ob es ein ganzer Block ist
+     * @param iBlockState
+     * @return
+     */
     @Override
     public boolean isFullCube(IBlockState iBlockState) {
         return true;
     }
 
+    /**
+     * Gibt den RenderTyp zurück
+     * @param iBlockState
+     * @return
+     */
     @Override
     public EnumBlockRenderType getRenderType(IBlockState iBlockState) {
         return EnumBlockRenderType.MODEL;
     }
 
 
+    /**
+     * Überprüft ob ein Entity mit dem Block in berührung kommt
+     * @param worldIn
+     * @param pos
+     * @param state
+     * @param entityIn
+     */
     public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
     {
         entityIn.motionX *= 1.15D;
@@ -68,6 +98,13 @@ public class DarkStreet extends Block{
         }
     }
 
+    /**
+     * Verschnellt ein kolitiertes Entity
+     * @param blockState
+     * @param worldIn
+     * @param pos
+     * @return
+     */
     @Override
     public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, World worldIn, BlockPos pos) {
        return new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.99D, 1.0D);

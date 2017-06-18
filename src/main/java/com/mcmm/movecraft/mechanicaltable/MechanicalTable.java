@@ -1,5 +1,6 @@
 package com.mcmm.movecraft.mechanicaltable;
 
+import com.mcmm.movecraft.MoveCraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -26,11 +27,13 @@ import javax.annotation.Nullable;
  */
 public class MechanicalTable extends Block {
 
+
     protected MechanicalTable()
     {
         super(Material.WOOD);
-        this.setCreativeTab(CreativeTabs.DECORATIONS);
+        this.setCreativeTab(MoveCraft.creativeTab);
     }
+
 
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ)
     {
@@ -46,10 +49,13 @@ public class MechanicalTable extends Block {
         }
     }
 
+
+
     public static class InterfaceCraftingTable implements IInteractionObject
     {
         private final World world;
         private final BlockPos position;
+
 
         public InterfaceCraftingTable(World worldIn, BlockPos pos)
         {
@@ -57,25 +63,17 @@ public class MechanicalTable extends Block {
             this.position = pos;
         }
 
-        /**
-         * Get the name of this object. For players this returns their username
-         */
+
         public String getName()
         {
             return null;
         }
 
-        /**
-         * Returns true if this thing is named
-         */
         public boolean hasCustomName()
         {
             return false;
         }
 
-        /**
-         * Get the formatted ChatComponent that will be used for the sender's username in chat
-         */
         public ITextComponent getDisplayName()
         {
             return new TextComponentTranslation(Blocks.CRAFTING_TABLE.getUnlocalizedName() + ".name", new Object[0]);
@@ -83,7 +81,6 @@ public class MechanicalTable extends Block {
 
         public Container createContainer(InventoryPlayer playerInventory, EntityPlayer playerIn)
         {
-            System.out.println("In MechTable");
             return new ContainerWorkbench(playerInventory, this.world, this.position);
         }
 

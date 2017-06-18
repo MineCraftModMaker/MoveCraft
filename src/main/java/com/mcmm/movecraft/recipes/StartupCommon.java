@@ -21,8 +21,6 @@ public class StartupCommon {
         final int RED_DYE_DAMAGE_VALUE = EnumDyeColor.RED.getDyeDamage();
         final int BLUE_DYE_DAMAGE_VALUE = EnumDyeColor.BLUE.getDyeDamage();
         final int WHITE_DYE_DAMAGE_VALUE = EnumDyeColor.WHITE.getDyeDamage();
-        final int BLACK_DYE_DAMAGE_VALUE = EnumDyeColor.BLACK.getDyeDamage();
-
 
         // Mechanical Table
         GameRegistry.addRecipe(new ItemStack(com.mcmm.movecraft.mechanicaltable.StartupCommon.itemMechanicalTable), new Object[]{
@@ -47,7 +45,6 @@ public class StartupCommon {
                 new ItemStack(Items.DYE, 1, WHITE_DYE_DAMAGE_VALUE)
         });
 
-        // TODO: 18.06.2017  
         // Asphalt
         GameRegistry.addShapelessRecipe(new ItemStack(com.mcmm.movecraft.Street.asphalt.StartupCommon.itemAsphalt, 1), new Object[]{
                 Items.WATER_BUCKET,

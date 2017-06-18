@@ -14,27 +14,50 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  */
 public class Asphalt extends Block {
 
+    /**
+     * Übergibt das Material aus was es besteht
+     * Fügt in den CreativTab hinzu
+     */
     public Asphalt() {
         super(Material.ROCK);
         this.setCreativeTab(MoveCraft.creativeTab);
     };
 
+    /**
+     * Gibt die Konsistens des Bockes zurück
+     * @return
+     */
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()
     {
         return BlockRenderLayer.SOLID;
     }
 
+    /**
+     * Gibt zurück ob der Block druchsichtig ist
+     * @param iBlockState
+     * @return
+     */
     @Override
     public boolean isOpaqueCube(IBlockState iBlockState) {
         return true;
     }
 
+    /**
+     * Gibt zurück ob es ein ganzer Block ist
+     * @param iBlockState
+     * @return
+     */
     @Override
     public boolean isFullCube(IBlockState iBlockState) {
         return true;
     }
 
+    /**
+     * Gibt den RenderTyp zurück
+     * @param iBlockState
+     * @return
+     */
     @Override
     public EnumBlockRenderType getRenderType(IBlockState iBlockState) {
         return EnumBlockRenderType.MODEL;

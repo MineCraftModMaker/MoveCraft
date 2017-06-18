@@ -8,11 +8,17 @@ import net.minecraft.item.Item;
  */
 public class MoveCraftTab extends CreativeTabs {
 
-
+    /**
+     * Übergibt den Name des CreativTabs
+     */
     public MoveCraftTab() {
         super("MoveCraft");
     }
 
+    /**
+     * Returnt das Icon des Tabs
+     * @return
+     */
     @Override
     public Item getTabIconItem() {
         return com.mcmm.movecraft.teleporter.teleportpearl.StartupCommon.teleportPearl;
