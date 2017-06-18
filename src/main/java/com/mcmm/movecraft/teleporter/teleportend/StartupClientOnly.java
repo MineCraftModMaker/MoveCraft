@@ -8,6 +8,10 @@ import net.minecraftforge.client.model.ModelLoader;
  */
 public class StartupClientOnly {
 
+
+    /**
+     * Die Methode gibt an wo sich das Model befindet.
+     */
     public static void preInitClientOnly()
     {
         ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation("movecraft:teleportend", "inventory");

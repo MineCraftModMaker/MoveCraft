@@ -9,6 +9,13 @@ public class StartupCommon {
 
     public static IronPole ironPole;
 
+    /**
+     * Setzt die Namen
+     *    unlocalized: Mehrere Dinge können den gleichen haben
+     *    registry:    Muss eindeutig sein
+     *
+     * Registriert das Item
+     */
     public static void preInitCommon()
     {
         ironPole = (IronPole)(new IronPole().setUnlocalizedName("ironpole"));

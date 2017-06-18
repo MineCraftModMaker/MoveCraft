@@ -77,15 +77,19 @@ public class TeleportConnector extends Item {
 //        return super.onItemRightClick(itemStackIn, worldIn, playerIn, hand);
 //    }
 
-
+    /**
+     * In dieser Methode wird ein TeleportStart mit einen TeleportEnd verknüpft
+     */
     @Override
     public EnumActionResult onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 //        if(!worldIn.isRemote)
 //        {
 //            return super.onItemUse(stack, playerIn, worldIn, pos, hand, facing, hitX, hitY, hitZ);
 //        }
+        // Der Block auf dem das Item benutzt wird wird geholt
         Block block = worldIn.getBlockState(pos).getBlock();
 
+        // Wenn es ein TeleportStart ist wird der Block und die dazugehörigen Koordinaten gespeichert
         if(block instanceof TeleportStart)
         {
 
@@ -93,17 +97,22 @@ public class TeleportConnector extends Item {
             startX = pos.getX();
             startY = pos.getY();
             startZ = pos.getZ();
+            // Muss abgefragt werden da sonst die Nachricht 2 mal kommen würde
             if(!worldIn.isRemote) {
                 playerIn.addChatMessage(new TextComponentString("Start at: X(" + pos.getX() + ") Y(" + pos.getY() + ") Z(" + pos.getZ() + ")"));
             }
         }
+
+        // Abfragen ob es ein End Teleporter ist
         if(block instanceof TeleportEnd)
         {
+            // Muss abgefragt werden da sonst die Nachricht 2 mal kommen würde
             if(!worldIn.isRemote) {
                 playerIn.addChatMessage(new TextComponentString("End at: X(" + pos.getX() + ") Y(" + pos.getY() + ") Z(" + pos.getZ() + ")"));
             }
             if(startBlock!= null)
             {
+                // Muss abgefragt werden da sonst die Nachricht 2 mal kommen würde
                 if(!worldIn.isRemote) {
                     playerIn.addChatMessage(new TextComponentString("Connection Complete"));
                 }
@@ -112,13 +121,17 @@ public class TeleportConnector extends Item {
                 //startTele.setEndX(pos.getX() + 0.5);
                 //startTele.setEndY(pos.getY() + 0.07);
                 //startTele.setEndZ(pos.getZ() + 0.5);
+
+                // Es wird eine neue PortConnection gemacht die eine Verknüpfung zwischen einem Start und einem Ende darstellt
                 PortConnection pc = new PortConnection(startX, startY, startZ, pos.getX() + 0.5, pos.getY() + 0.07, pos.getZ() + 0.5);
                 PortConnection pcDouble = TeleportData.get(worldIn).isInList(pc);
                 if(pcDouble == null)
                 {
+                    // wenns noch keinen Doppelten gibt wird ein neuer hinzugefügt
                     TeleportData.get(worldIn).addListEntry(pc);
                 } else
                 {
+                    // sonst wird er gelöscht und hinzugefügt
                     TeleportData.get(worldIn).deleteListEntry(pcDouble);
                     TeleportData.get(worldIn).addListEntry(pc);
                 }

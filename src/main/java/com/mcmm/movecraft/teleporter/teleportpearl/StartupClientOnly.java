@@ -7,6 +7,10 @@ import net.minecraftforge.client.model.ModelLoader;
  * Created by Ewald on 02.06.2017.
  */
 public class StartupClientOnly {
+
+    /**
+     * Die Methode gibt an wo sich das Model befindet.
+     */
     public static void preInitClientOnly()
     {
         ModelResourceLocation itemModelResourceLocation = new ModelResourceLocation("movecraft:teleportpearl", "inventory");

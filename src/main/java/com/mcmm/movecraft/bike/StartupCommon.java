@@ -11,6 +11,13 @@ public class StartupCommon {
     public static Bike bike;
     public static ItemBlock itemBike;
 
+    /**
+     * Setzt die Namen
+     *    unlocalized: Mehrere Dinge können den gleichen haben
+     *    registry:    Muss eindeutig sein
+     *
+     * Registriert sowohl den Block als auch das Item
+     */
     public static void preInitCommon()
     {
         bike = (Bike) (new Bike().setUnlocalizedName("bike"));

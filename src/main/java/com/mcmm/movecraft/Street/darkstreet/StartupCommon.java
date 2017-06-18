@@ -11,6 +11,14 @@ public class StartupCommon {
     public static DarkStreet darkStreet;
     public static ItemBlock itemDarkStreet;
 
+
+    /**
+     * Setzt die Namen
+     *    unlocalized: Mehrere Dinge können den gleichen haben
+     *    registry:    Muss eindeutig sein
+     *
+     * Registriert sowohl den Block als auch das Item
+     */
     public static void preInitCommon()
     {
         darkStreet = (DarkStreet) (new DarkStreet().setUnlocalizedName("street_dark"));

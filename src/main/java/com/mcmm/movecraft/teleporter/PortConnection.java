@@ -20,6 +20,12 @@ public class PortConnection {
         this.endZ = endZ;
     }
 
+    /**
+     *
+     * @param o
+     * Es werden hier nur die Start Koordinaten überprüft da sich ein Ende auch mit
+     * mehreren Starts verbinden lassen soll.
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

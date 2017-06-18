@@ -4,7 +4,6 @@ import com.mcmm.movecraft.MoveCraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -56,6 +55,7 @@ public class TeleportEnd extends Block{
     {
         return TELEPORT_AABB;
     }
+
 
 
     private AxisAlignedBB getAABBFromPixels(int minX, int minY, int minZ, int maxX, int maxY, int maxZ)

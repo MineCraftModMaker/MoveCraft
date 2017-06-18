@@ -1,6 +1,5 @@
 package com.mcmm.movecraft.teleporter.teleportconnector;
 
-import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
@@ -10,6 +9,14 @@ public class StartupCommon {
 
     public static TeleportConnector teleportConnector;
 
+
+    /**
+     * Setzt die Namen
+     *    unlocalized: Mehrere Dinge können den gleichen haben
+     *    registry:    Muss eindeutig sein
+     *
+     * Registriert das Item
+     */
     public static void preInitCommon()
     {
         teleportConnector = (TeleportConnector)(new TeleportConnector().setUnlocalizedName("teleportconnector"));

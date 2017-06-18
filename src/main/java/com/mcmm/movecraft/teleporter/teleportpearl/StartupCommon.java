@@ -1,6 +1,5 @@
 package com.mcmm.movecraft.teleporter.teleportpearl;
 
-import com.mcmm.movecraft.ironpole.IronPole;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
@@ -10,6 +9,13 @@ public class StartupCommon {
 
     public static TeleportPearl teleportPearl;
 
+    /**
+     * Setzt die Namen
+     *    unlocalized: Mehrere Dinge können den gleichen haben
+     *    registry:    Muss eindeutig sein
+     *
+     * Registriert das Item
+     */
     public static void preInitCommon()
     {
         teleportPearl = (TeleportPearl)(new TeleportPearl().setUnlocalizedName("teleportpearl"));

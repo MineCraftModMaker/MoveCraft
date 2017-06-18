@@ -114,18 +114,31 @@ public class TeleportStart extends Block  {
         player.getHeldItem(EnumHand.MAIN_HAND);
     }
 
+    /**
+     *
+     * @param worldIn
+     * @param pos
+     * @param state
+     * @param entityIn
+     * Die Methode wird dann aufgerufen wenn ein Entity es auf der Oberseite Berührt
+     * Sie fragt ab ob es eine passende Verknüpfung für den Teleporter gibt oder nicht
+     * Teleport das Entity bei erfolgreicher Abfrage
+     */
     public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
     {
+        // Die folgenden Zeilen dienen zum herausfinden wo genau das Entity sich auf den Teleporter befindet
         double x = entityIn.getPositionVector().xCoord;
         double x1 = Math.abs(x - (int)x);
         double z = entityIn.getPositionVector().zCoord;
         double z1 = Math.abs(z - (int)z);
+        // Wenn sich das Entity ziemlich in der Mitte befindet wird abgefragt
         if(x1 > 0.3 && x1 < 0.7 && z1 > 0.3 && z1 < 0.7) {
 //            MapStorage storage = worldIn.getPerWorldStorage();
 //            storage.setData("MOVECRAFT_DATA", TeleportData.get(worldIn));
 //            System.out.println(((TeleportData)storage.getOrLoadData(TeleportData.class, "MOVECRAFT_DATA")).getList().toString());
 //            connectionList = TeleportData.get(worldIn).getList();
             connectionList = TeleportData.get(worldIn).getList();
+            // Wenn es eine passende Verknüpfung gibt wird das Entity teleportiert.
             for (PortConnection pc :
                     connectionList) {
                 if(pos.getX() == pc.getStartX() && pos.getY() == pc.getStartY() && pos.getZ() == pc.getStartZ())
@@ -140,6 +153,14 @@ public class TeleportStart extends Block  {
 
     }
 
+    /**
+     *
+     * @param blockState
+     * @param worldIn
+     * @param pos
+     * Stellt die Hixbox des Blocks dar
+     * Wichtig darum weil der Block sonst nicht wirklich mit dem Entity collidiert
+     */
     @Override
     public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, World worldIn, BlockPos pos) {
         return new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.0624D, 1.0D);

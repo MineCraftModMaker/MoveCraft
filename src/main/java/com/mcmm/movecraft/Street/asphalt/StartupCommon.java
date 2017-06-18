@@ -11,6 +11,14 @@ public class StartupCommon {
     public static Asphalt asphalt;
     public static ItemBlock itemAsphalt;
 
+
+    /**
+     * Setzt die Namen
+     *    unlocalized: Mehrere Dinge können den gleichen haben
+     *    registry:    Muss eindeutig sein
+     *
+     * Registriert sowohl den Block als auch das Item
+     */
     public static void preInitCommon()
     {
         asphalt = (Asphalt) (new Asphalt().setUnlocalizedName("asphalt_unlocalized"));

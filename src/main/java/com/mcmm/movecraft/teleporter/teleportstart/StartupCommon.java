@@ -11,6 +11,13 @@ public class StartupCommon {
     public static TeleportStart startteleport;
     public static ItemBlock itemTeleportStart;
 
+    /**
+     * Setzt die Namen
+     *    unlocalized: Mehrere Dinge können den gleichen haben
+     *    registry:    Muss eindeutig sein
+     *
+     * Registriert sowohl den Block als auch das Item
+     */
     public static void preInitCommon()
     {
         startteleport = (TeleportStart) (new TeleportStart().setUnlocalizedName("start_teleport"));
