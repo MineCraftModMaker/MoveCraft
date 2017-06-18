@@ -2,6 +2,8 @@ package com.mcmm.movecraft.teleporter;
 
 /**
  * Created by Marco on 01.06.2017.
+ *
+ * Ist ein Datenobjekt zur Verknüpfung der Teleporter
  */
 public class PortConnection {
     double startX;

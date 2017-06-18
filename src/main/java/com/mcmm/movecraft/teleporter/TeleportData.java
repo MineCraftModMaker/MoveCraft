@@ -9,6 +9,9 @@ import java.util.LinkedList;
 
 /**
  * Created by Marco on 02.06.2017.
+ *
+ * Speichert die Verknüpfungen in einer Liste
+ * Soll auch das Speichern nach Verlassen der Karte übernehmen --> funktioniert nicht (bin verzweifelt dran)
  */
 public class TeleportData extends WorldSavedData {
     private static final String DATA_NAME = "MOVECRAFT_DATA";

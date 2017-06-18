@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 /**
  * Created by Marco on 17.03.2017.
  *
- * Main Klasse des Projektes
+ * Main-Klasse des Projektes
  */
 
 @Mod(modid = MoveCraft.MODID, version = MoveCraft.VERSION)
