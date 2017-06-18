@@ -38,7 +38,7 @@ public class StartupCommon {
         GameRegistry.addShapelessRecipe(new ItemStack(com.mcmm.movecraft.Street.darkstreet.StartupCommon.itemDarkStreet, 2), new Object[]{
                 Blocks.COBBLESTONE,
                 Blocks.GRAVEL,
-                new ItemStack(Items.DYE, 1, BLACK_DYE_DAMAGE_VALUE)
+                com.mcmm.movecraft.Street.asphalt.StartupCommon.asphalt
         });
 
         // LightStreet
