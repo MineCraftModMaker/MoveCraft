@@ -5,10 +5,13 @@ MoveCraft is an Mod for Forge which imports better Streets and an Teleporter. Th
 
 Team
 
-Marco Heiling
+Marco Heiling:
 Programmer, Designer
-Ewald Hartmann
+
+Ewald Hartmann:
 Programmer, Designer
+
+
 About the Project
 
 This Mod is a project for our school.
